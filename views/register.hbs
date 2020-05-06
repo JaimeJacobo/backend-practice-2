@@ -1,0 +1,23 @@
+<h2>Register</h2>
+
+<button><a href="/">Ir a Home</a></button>
+<button><a href="/login">Ir a login</a></button>
+
+<form action="/register" method="POST">
+
+  <input type="text" name="name" placeholder="Name" value={{name}}>
+  <input type="password" name="password" placeholder="Password" >
+  <input type="password" name="confirmPassword" placeholder="Repeat Password">
+  <input type="text" name="email" placeholder="Email" value={{email}}>
+
+  <button type="submit">Crear</button>
+</form>
+
+<div>
+  {{#each errors}}
+    <div>
+      <p style="font-size: 30px;">{{this.msg}}</p>
+      <p>{{this.subMsg}}</p>
+    </div>
+  {{/each}}
+</div>
